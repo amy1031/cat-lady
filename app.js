@@ -64,6 +64,16 @@ var cats = [{
     petCount: 0
 }];
 
+/*function CatCreator(id, name, imgUrl, status){
+    this.id = id;
+    this.name = name,
+    this.imgUrl = imgurl,
+    this.status = status,
+    this.petCount = 0
+}
+
+var myCat = new CatCreator(334, "my cat", )*/
+
 function petCat(catId) {
     var petCount = document.getElementById("petCount"+catId)
     var catStatus = document.getElementById("catStatus"+catId)
@@ -130,3 +140,4 @@ document.getElementById("cat-list").innerHTML = template;
 }
 
 drawCats(cats);
+
