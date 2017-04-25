@@ -25,6 +25,8 @@ var whiskers = {
     petCount: 0
 };*/
 
+function hello() {
+
 var cats = [{
     id: 1,
     name: "Whiskers",
@@ -63,6 +65,7 @@ var cats = [{
     goneStatus: "Where did the cat go?",
     petCount: 0
 }];
+
 
 /*function CatCreator(id, name, imgUrl, status){
     this.id = id;
@@ -138,6 +141,30 @@ function drawCats(listOfCats){
     }
 document.getElementById("cat-list").innerHTML = template;
 }
-
 drawCats(cats);
 
+}
+//hello();
+
+
+//var cat1 = {name: "tom"};
+
+function Marker(userColorChoice, brand) {
+
+    if (!userColorChoice) {
+        return new Error("Sorry, you must provide a color to make markers");
+    }
+    if (!brand) {
+        return new Error("Sorry, you must provide a brand to make markers");
+    }
+
+    this.color = userColorChoice;
+    this.brand = brand;
+
+    this.draw = function() {
+        return userColorChoice; // returns what it was originlly given. Cannot change it in the browser console
+    };
+};
+
+var blackMarker = new Marker("Black", "Expo");
+var marksFavoriteMarker = new Marker("Purple", "Quartet");
